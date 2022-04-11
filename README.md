@@ -4,37 +4,26 @@ The MultiValue Dictionary app is a command line application that stores a multiv
 **System Requirements:**
 [.NET CORE Runtime or SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
+## Technical Considerations
+```
+  IOC.
+  Contract enforcement
+  Defined Response massages code with extendable message interpratation
+  Hashing for faster retrival based on hashed buckets
+  Inbuild Globalization/ patch release
+  Seperation of success/error messages
+  open for changes - generic support
+```
+
 **TO RUN APPLICATION**
 1) Ensure you have downloaded SDK above. 
 2) Click on the latest release.
 3) Download the MultiValueDictionary.exe file to your computer. If you encounter trust issues, simply select the Trust/Run Anyway options.
 4) Double click the downloaded file to start the application.
-5) Enter the commands below! 
+5) Use the commands from list below.
 6) Enter "QUIT" to exit the application.
 
-
-## Technical Considerations
-IOC.
-Contract enforcement
-Defined Response massages code with extendable message interpratation
-Hashing for faster retrival based on hashed buckets
-Inbuild Globalization/ patch release
-Seperation of success/error messages
-open for changes - generic support
-
-Example:
-```
-> COUNTKEYS
-0
-> ADD foo bar
-) Added
-> ADD bang baz
-) Added
-> COUNTKEYS
-) 2
-```
-
-
+## Commands
 The application supports the following commands. Please, keep in mind the application is case-sensitive and will require that commands be in all capital letters.
 
 ### KEYS
