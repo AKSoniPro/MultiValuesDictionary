@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MultiValueDictionaryProviderTests/obj/Debug/.netcoreapp,version=v5.0
+/MultiValueDictionaryProvider/obj/Debug/net5.0
+/MultiValueDictionaryContract/obj/Debug/net5.0
+/.vs
