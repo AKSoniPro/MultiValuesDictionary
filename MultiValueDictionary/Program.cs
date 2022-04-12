@@ -16,15 +16,11 @@ namespace MultiValueDictionary
             {
                 Console.Write(">");
                 string input = Console.ReadLine();
-                
-                if (input.ToUpperInvariant() == "QUIT")  
+
+                if (input.ToUpperInvariant() == "QUIT")
                     break;
-                    app.CallMethod(input);
-                //app.ParseResponse(res);
-
+                app.CallMethod(input);
             }
-           // Stop();
-
         }
 
         private static IHostBuilder CreateHostBuilder(string[] args)

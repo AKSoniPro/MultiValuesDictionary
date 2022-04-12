@@ -5,6 +5,11 @@ using System.Linq;
 
 namespace MultiValueDictionaryProvider
 {
+    /// <summary>
+    /// Generic class which is multivalue dictionary provider
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="K"></typeparam>
     public class MultiValueDictionaryProvider<T, K> : IMultiValueDictionaryProvider<T, K>
     {
         #region ctor

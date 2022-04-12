@@ -15,6 +15,10 @@ namespace MultiValueDictionary
             _printer = printer;
         }
 
+        /// <summary>
+        ///  Invoke command and handle exception for given input command and  argument
+        /// </summary>
+        /// <param name="input"></param>
         public void CallMethod(string input)
         {
 
@@ -29,12 +33,12 @@ namespace MultiValueDictionary
                 switch (inputArray[0].ToUpperInvariant())
                 {
                     case "KEYS":
-                        PresentItem(_dictionary.Keys(), _printer);
+                        ProcessItem(_dictionary.Keys(), _printer);
                         break;
 
                     case "MEMBERS":
                         if (CheckFirstArgument(inputArray, _printer))
-                            PresentItem(_dictionary.Members(inputArray[1]), _printer);
+                            ProcessItem(_dictionary.Members(inputArray[1]), _printer);
                         break;
 
                     case "ADD":
@@ -67,7 +71,7 @@ namespace MultiValueDictionary
                         break;
 
                     case "ALLMEMBERS":
-                        PresentItem(_dictionary.AllMembers(), _printer);
+                        ProcessItem(_dictionary.AllMembers(), _printer);
                         break;
 
                     case "ITEMS":
@@ -108,7 +112,7 @@ namespace MultiValueDictionary
             return false;
         }
 
-        private static void PresentItem(IEnumerable<string> keys, IPrinter printer)
+        private static void ProcessItem(IEnumerable<string> keys, IPrinter printer)
         {
             int i = 0;
             foreach (var key in keys)
