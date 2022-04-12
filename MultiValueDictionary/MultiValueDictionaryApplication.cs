@@ -113,7 +113,7 @@ namespace MultiValueDictionary
             int i = 0;
             foreach (var key in keys)
             {
-                printer.Print($"{++i} {key}");
+                printer.Print($"{++i}) {key}");
             }
             CheckEmptySet(i, printer);
         }
@@ -131,7 +131,7 @@ namespace MultiValueDictionary
             int i = 0;
             foreach (var item in items)
             {
-                printer.Print($"{++i} {item.Item1} : {item.Item2}");
+                printer.Print($"{++i}) {item.Item1} : {item.Item2}");
             }
             CheckEmptySet(i, printer);
         }

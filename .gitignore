@@ -6,3 +6,11 @@
 /MultiValueDictionaryProvider/obj/Debug/net5.0
 /MultiValueDictionaryContract/obj/Debug/net5.0
 /.vs
+/MultiValueDictionary/obj
+/MultiValueDictionary/bin
+/MultiValueDictionaryContract/obj
+/MultiValueDictionaryContract/bin
+/MultiValueDictionaryProvider/obj
+/MultiValueDictionaryProvider/bin
+/MultiValueDictionaryProviderTests/obj
+/MultiValueDictionaryProviderTests/bin

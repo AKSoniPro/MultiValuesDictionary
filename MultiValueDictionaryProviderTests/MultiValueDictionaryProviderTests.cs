@@ -390,7 +390,7 @@ namespace MultiValueDictionaryProvider.Tests
 
         #region Performace Test - must be only enabled for performace fine tuning
 
-        #if !DEBUG
+#if !DEBUG
 
 
         [TestMethod()]
@@ -438,6 +438,7 @@ namespace MultiValueDictionaryProvider.Tests
             var key = _dictionary.Keys().ElementAtOrDefault(200);
 
             var watch = new Stopwatch();
+            watch.Start();
             Assert.IsTrue(_dictionary.KeyExists(key));
 
 
@@ -446,6 +447,43 @@ namespace MultiValueDictionaryProvider.Tests
             Cleanup();
         }
 
+        [TestMethod()]
+        public void AllMemberTestLoad100000()
+        {
+            int maxCount = 100000;
+
+            LoadTestAdd(maxCount);
+
+            var watch = new Stopwatch();
+            watch.Start();
+
+            var items = _dictionary.AllMembers();
+
+            watch.Stop();
+            Trace.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms, for Get All Members load of {maxCount}");
+            Assert.IsNotNull(items);
+            Cleanup();
+        }
+
+        [TestMethod()]
+        public void AllItemsTestLoad100000()
+        {
+            int maxCount = 100000;
+
+            LoadTestAdd(maxCount);
+
+
+
+            var watch = new Stopwatch();
+            watch.Start();
+
+            var items = _dictionary.Items();
+
+            watch.Stop();
+            Trace.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms, for Get load of {maxCount}");
+            Assert.IsNotNull(items);
+            Cleanup();
+        }
 
         private void LoadTestAdd(int maxCount)
         {
@@ -476,7 +514,7 @@ namespace MultiValueDictionaryProvider.Tests
         {
             return Guid.NewGuid().ToString();
         }
-        #endif
+#endif
 
         #endregion
 
